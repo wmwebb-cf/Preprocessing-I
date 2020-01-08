@@ -198,9 +198,15 @@ main {
   display: flex;
   margin-bottom: 2rem;
 }
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+  }
+}
 main .main-left {
   flex-basis: 50%;
   margin-right: 2%;
+  margin-bottom: 2rem;
 }
 main .main-left .left-title {
   font-size: 3.5em;
@@ -212,6 +218,7 @@ main .main-left .left-text {
 }
 main .main-right {
   flex-basis: 50%;
+  margin-bottom: 2rem;
 }
 main .main-right .right-title {
   font-size: 2em;
@@ -252,6 +259,18 @@ section.bottom .table p {
 }
 section.bottom .row-b {
   background-color: #F2F2F2;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+.contact-info .contact-title {
+  font-size: 2em;
+  margin-bottom: 2rem;
+}
+.contact-info p {
+  font-size: 1.25em;
 }
 footer {
   background-color: #808080;
