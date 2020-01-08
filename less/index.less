@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -55,5 +55,169 @@ table {
 
 html, body {
     height: 100%;
+		font-family: 'Pragati Narrow', sans-serif;
+		letter-spacing: 0.75px;
+		display: flex;
+		justify-content: center;
 }
 
+// >>>>>>>>>>>>>>>>>>>>>>>
+// ====== MIXINs Variables ======
+// >>>>>>>>>>>>>>>>>>>>>>>
+
+.rounded-top-corner {
+	border-top-left-radius: 0.25em;
+	border-top-right-radius: 0.25em;
+}
+.rounded-bottom-corner {
+	border-bottom-left-radius: 0.25em;
+	border-bottom-right-radius: 0.25em;
+}
+@theme-font-size: 1.25em;
+@theme-marg-bot: 2rem;
+@theme-padding: 1rem;
+@h1-font-size: 5em;
+@h2-font-size: 3.5em;
+@h3-font-size: 2em;
+
+// >>>>>>>>>>>>>>>>>>>>>>>
+// ====== My Styles ======
+// >>>>>>>>>>>>>>>>>>>>>>>
+
+.container {
+	width: 90%;
+}
+
+// ====== NAVBAR Styles ======
+nav {
+	display: flex;
+	justify-content: flex-end;
+
+	a {
+		text-decoration: none;
+		margin: 1em;
+		color: black;
+		font-size: @theme-font-size;
+	}
+}
+
+// ====== TOP Section ======
+section.top {
+	// height: 50%;
+	background-color: #E9ECEF;
+	border-radius: 8px;
+	padding: 5em 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: @theme-marg-bot;
+
+	.logo {
+		height: 15rem;
+		margin-bottom: @theme-marg-bot;
+	}
+	.headline {
+		font-size: @h1-font-size;
+		margin-bottom: @theme-marg-bot;
+	}
+	.motto {
+		font-size: 2em;
+		width: 100%;
+		border-bottom: solid 1px lightgrey;
+		padding-bottom: 20px;
+		margin-bottom: @theme-marg-bot;
+	}
+	.top-content-desc {
+		margin-bottom: @theme-marg-bot;
+		font-size: @theme-font-size;
+	}
+	.action-call {
+		padding: 10px 15px;
+		font-size: @theme-font-size;
+		color: white;
+		background-color: #808080;
+		border-radius: 8px;
+	}
+}
+
+// ====== MAIN ======
+
+main {
+	display: flex;
+	margin-bottom: @theme-marg-bot;
+
+	.main-left {
+		flex-basis: 50%;
+		margin-right: 2%;
+
+		.left-title {
+			font-size: @h2-font-size;
+			margin-bottom: @theme-marg-bot;
+
+		}
+		.left-text {
+			font-size: @theme-font-size;
+			line-height: 1.2em;
+		}
+	}
+	.main-right {
+		flex-basis: 50%;
+
+		.right-title {
+			font-size: @h3-font-size;
+			margin-bottom: @theme-marg-bot;
+		}
+		.right-item {
+			border: solid 1px lightgrey;
+			padding: @theme-padding;
+			font-size: @theme-font-size; //refact
+		}
+		.top-border {
+			.rounded-top-corner();
+		}
+		.bot-border {
+			.rounded-bottom-corner();
+		}
+	}
+}
+
+// ====== BOTTOM Section ======
+section.bottom {
+	margin: 0 auto 5em; //refact
+	width: 98%;
+
+
+	.table-title {
+		padding: @theme-padding;
+		font-size: @h3-font-size; //refact
+	}
+
+	.table {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding: @theme-padding;
+		border-top: solid 1px lightgrey;
+
+		p {
+			flex-basis: 25%;
+			padding: @theme-padding;
+			font-size: @theme-font-size; //refact
+		}
+	}
+
+	.row-b {
+		background-color: #F2F2F2;
+	}
+
+}
+
+footer {
+	background-color: #808080;
+	color: white;
+	font-size: @theme-font-size; //refact
+	padding: 1.7em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
