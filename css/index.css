@@ -1,1 +1,283 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Pragati Narrow', sans-serif;
+  letter-spacing: 0.75px;
+  display: flex;
+  justify-content: center;
+}
+.rounded-top-corner {
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+.rounded-bottom-corner {
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+}
+.container {
+  width: 90%;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+nav a {
+  text-decoration: none;
+  margin: 1em;
+  color: black;
+  font-size: 1.25em;
+}
+section.top {
+  background-color: #E9ECEF;
+  border-radius: 8px;
+  padding: 5em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+section.top .logo {
+  height: 15rem;
+  margin-bottom: 2rem;
+}
+section.top .headline {
+  font-size: 5em;
+  margin-bottom: 2rem;
+}
+section.top .motto {
+  font-size: 2em;
+  width: 100%;
+  border-bottom: solid 1px lightgrey;
+  padding-bottom: 20px;
+  margin-bottom: 2rem;
+}
+section.top .top-content-desc {
+  margin-bottom: 2rem;
+  font-size: 1.25em;
+}
+section.top .action-call {
+  padding: 10px 15px;
+  font-size: 1.25em;
+  color: white;
+  background-color: #808080;
+  border-radius: 8px;
+}
+main {
+  display: flex;
+  margin-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+  }
+}
+main .main-left {
+  flex-basis: 50%;
+  margin-right: 2%;
+  margin-bottom: 2rem;
+}
+main .main-left .left-title {
+  font-size: 3.5em;
+  margin-bottom: 2rem;
+}
+main .main-left .left-text {
+  font-size: 1.25em;
+  line-height: 1.2em;
+}
+main .main-right {
+  flex-basis: 50%;
+  margin-bottom: 2rem;
+}
+main .main-right .right-title {
+  font-size: 2em;
+  margin-bottom: 2rem;
+}
+main .main-right .right-item {
+  border: solid 1px lightgrey;
+  padding: 1rem;
+  font-size: 1.25em;
+}
+main .main-right .top-border {
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+main .main-right .bot-border {
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+}
+section.bottom {
+  margin: 0 auto 5em;
+  width: 98%;
+}
+section.bottom .table-title {
+  padding: 1rem;
+  font-size: 2em;
+}
+section.bottom .table {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: solid 1px lightgrey;
+}
+section.bottom .table p {
+  flex-basis: 25%;
+  padding: 1rem;
+  font-size: 1.25em;
+}
+section.bottom .row-b {
+  background-color: #F2F2F2;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+.contact-info .contact-title {
+  font-size: 2em;
+  margin-bottom: 2rem;
+}
+.contact-info p {
+  font-size: 1.25em;
+}
+footer {
+  background-color: #808080;
+  color: white;
+  font-size: 1.25em;
+  padding: 1.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
